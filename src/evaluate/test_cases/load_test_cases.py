@@ -1,4 +1,3 @@
-from regex import P
 from data.data_facade import load_dataset
 from deepattern import Strategy
 

@@ -1,6 +1,5 @@
 from deepattern import TransitionalObject
 from dataclasses import dataclass
-import tensorflow as tf
 from tqdm import tqdm
 import numpy as np
 import time
@@ -8,9 +7,9 @@ import time
 
 @dataclass
 class EvaluateRunnerObject:
-    model: tf.keras.Model
+    model: any
     model_name: str
-    test_case: tf.data.Dataset
+    test_case: any
     test_case_name: str
     test_case_size: int
 
@@ -24,9 +23,6 @@ class EvaluateRunnerObject:
         total_samples = 0
 
         for inputs, labels in tqdm(self.test_case, desc="Evaluating dataset", total=self.test_case_size):
-            if len(inputs.shape) == 1:
-                inputs = tf.expand_dims(inputs, axis=0)
-
             start_time = time.time()
             batch_predictions = self.model.predict(inputs, verbose=0)
             total_inference_time += time.time() - start_time
