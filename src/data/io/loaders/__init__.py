@@ -1,0 +1,3 @@
+from data.io.loaders.load_from_chunk_tfrecord import LoaderFromChunkTFRecordStrategy
+from data.io.loaders.load_from_tfrecord import LoaderFromTFRecordStrategy
+from data.io.loaders.load_from_folder import LoaderFromFolderStrategy

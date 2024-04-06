@@ -1,0 +1,1 @@
+from data.processing.embedders.image_embedder import ImageEmbedderStrategy

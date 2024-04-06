@@ -1,0 +1,15 @@
+[experiment]
+name="fc_fusion"
+save_dir="../assets/training"
+
+[train_dataset]
+data_name="signwriting_hands_v6"
+data_subname="fusion_emb"
+val_data="hagrid"
+
+[params]
+learning_rate=0.01
+lr_decay=0.99
+
+[run]
+epochs=50

@@ -1,0 +1,26 @@
+[setup]
+data_path="../assets/datasets/"
+pipeline_type="fusion"
+
+[loader]
+data_name="hagrid"
+data_subname="raw"
+include_none=false
+shuffle=true
+batch_size=32
+chunk_size=1000
+
+[converter]
+workers=5
+image_quality_percent=40
+image_scale_percent=30
+
+[features]
+embedding_size=1408 #img = 1280, landmark=128, original=126, fusion=1408
+landmarks_min_detection_confidence=0.7
+
+[split]
+fraction=0.8
+
+[exporter]
+data_name="fusion_emb"

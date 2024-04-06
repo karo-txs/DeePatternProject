@@ -1,0 +1,9 @@
+[save]
+path="../assets/evaluate"
+
+[model]
+names=["fc_fusion"]
+
+[test_cases]
+names=["hagrid"]
+subname="fusion_emb"

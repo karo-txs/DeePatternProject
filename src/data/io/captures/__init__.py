@@ -1,0 +1,1 @@
+from src.data.io.captures.capture_images import CaptureImagesStrategy
